@@ -1,0 +1,11 @@
+
+default:
+  #  dateFormat args
+  dateFormat: 'mm/dd/yyyy HH:MM:ss.L'
+  dateColor: 'gray'
+
+  namespaceColor: 'blue'
+  textColor: 'gray'
+
+  debugColor: 'yellow'
+  errorColor: 'red'
