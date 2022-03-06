@@ -2,7 +2,7 @@
 import * as fs from 'fs';
 import * as YAML from 'js-yaml';
 
-interface LoggerConfig {
+interface LogConf {
   dateFormat: string;
   dateColor: string;
 
@@ -32,16 +32,9 @@ class Logger {
     this.namespace = namespace;
 
     const yamlDump = YAML.load(fs.readFileSync('logger.yml', 'utf8'));
-    let config: LoggerConfig;
 
     // @ts-ignore
-    if (yamlDump[this.namespace]) {
-      // @ts-ignore
-      config = yamlDump[this.namespace];
-    } else {
-      // @ts-ignore
-      config = yamlDump.default;
-    }
+    const config: LogConf = yamlDump[this.namespace] ? yamlDump[this.namespace] : yamlDump.default;
 
     this.dateFormat = config.dateFormat;
     this.dateColor = config.dateColor;

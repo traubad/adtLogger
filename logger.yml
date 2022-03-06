@@ -9,3 +9,14 @@ default:
 
   debugColor: 'yellow'
   errorColor: 'red'
+
+test:
+  #  dateFormat args
+  dateFormat: 'HH:MM'
+  dateColor: 'green'
+
+  namespaceColor: 'gray'
+  textColor: 'blue'
+
+  debugColor: 'red'
+  errorColor: 'yellow'

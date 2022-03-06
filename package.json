@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint ./src --ext .ts",
-    "test": "tsc; jest"
+    "test": "tsc; jest --verbose"
   },
   "keywords": [],
   "author": "Adam Traub <adamTraubsEmail@gmail.com>",
